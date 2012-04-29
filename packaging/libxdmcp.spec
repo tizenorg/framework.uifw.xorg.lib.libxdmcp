@@ -1,8 +1,7 @@
-
-Name:       libXdmcp
+Name:       libxdmcp
 Summary:    X.Org X11 libXdmcp runtime library
 Version:    1.1.0
-Release:    1
+Release:    2.20
 Group:      System/Libraries
 License:    MIT
 URL:        http://www.x.org/
@@ -64,5 +63,5 @@ rm -rf %{buildroot}
 %{_includedir}/X11/Xdmcp.h
 %{_libdir}/libXdmcp.so
 %{_libdir}/pkgconfig/xdmcp.pc
-%{_docdir}/%{name}
+%{_docdir}/libXdmcp/*
 
