@@ -1,5 +1,0 @@
-usr/include/X11/*
-usr/lib/libXdmcp.a
-usr/lib/libXdmcp.so
-usr/lib/libXdmcp.la
-usr/lib/pkgconfig/xdmcp.pc
