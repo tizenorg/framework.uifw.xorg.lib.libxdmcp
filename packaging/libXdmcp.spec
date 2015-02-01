@@ -63,4 +63,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/X11/Xdmcp.h
 %{_libdir}/libXdmcp.so
 %{_libdir}/pkgconfig/xdmcp.pc
-
