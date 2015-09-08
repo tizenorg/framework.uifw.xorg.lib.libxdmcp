@@ -17,7 +17,7 @@ X Display Manager Control Protocol library.
 %package devel
 Summary: Development files for %{name}
 Group: Development/Libraries
-Provides: libxdmcp-devel 
+Provides: libxdmcp-devel
 Requires: %{name} = %{version}-%{release}
 
 %description devel
@@ -33,7 +33,8 @@ make %{?jobs:-j%jobs}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
+mkdir -p %{buildroot}/usr/share/license
+cp -af COPYING %{buildroot}/usr/share/license/%{name}
 make install DESTDIR=$RPM_BUILD_ROOT INSTALL="install -p"
 
 # We intentionally don't ship *.la files
@@ -52,7 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc AUTHORS COPYING ChangeLog Wraphelp.README.crypto
+/usr/share/license/%{name}
+#%doc AUTHORS COPYING ChangeLog Wraphelp.README.crypto
 %{_libdir}/libXdmcp.so.6
 %{_libdir}/libXdmcp.so.6.0.0
 
